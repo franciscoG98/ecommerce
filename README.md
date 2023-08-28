@@ -2,6 +2,36 @@
 
 Welcome to the Ecommerce Project! This is a full-stack web application built using TypeScript, React, Node.js, Express, Prisma, and PostgreSQL.
 
+## Todo
+- [ ] [fix prisma conection url](https://supabase.com/partners/integrations/prisma#connection-pooling-with-supabase)
+- [ ] fetch a Fake Store API
+- [ ] get a la API para obtener los productos https://fakestoreapi.com/products
+- [ ] Procesa los datos obtenidos de la API y muestra los productos en tu interfaz de usuario
+- [ ] agregar productos al carrito de compras.
+- [ ] páginas de detalles de productos
+- [ ] Crea páginas de categorías para organizar los productos según sus categorías.
+- [ ] Considera la implementación de un sistema de autenticación y registro de usuarios si planeas tener interacciones más avanzadas.
+- [ ] Implementa pruebas unitarias
+- [ ] Implementa pruebas integración
+- [ ] Utiliza las herramientas de desarrollo proporcionadas por Next.js para depurar y verificar el funcionamiento de tu aplicación
+- [ ] Agrega la capacidad de agregar productos al carrito y procesar pedidos
+- [ ] Implementa la autenticación de usuarios si es necesario
+- [ ] Asegúrate de que las interacciones con la interfaz de usuario sean intuitivas y fáciles de usar
+
+
+# Usefull commands
+
+Migrate data
+```
+npx prisma migrate dev --name init
+```
+
+Get models
+```
+npx prisma db pull
+```
+
+
 ## Features
 
 - Browse and search for products.
@@ -23,6 +53,9 @@ Welcome to the Ecommerce Project! This is a full-stack web application built usi
   - Express.js for API routes
   - Prisma for ORM and database access
   - PostgreSQL as the database
+
+- Api for products
+  - [Fake Store API](https://fakestoreapi.com/)
 
 ## Getting Started
 
