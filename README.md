@@ -4,9 +4,9 @@ Welcome to the Ecommerce Project! This is a full-stack web application built usi
 
 ## Todo
 - [ ] [fix prisma conection url](https://supabase.com/partners/integrations/prisma#connection-pooling-with-supabase)
-- [ ] fetch a Fake Store API
-- [ ] get a la API para obtener los productos https://fakestoreapi.com/products
-- [ ] Procesa los datos obtenidos de la API y muestra los productos en tu interfaz de usuario
+- [x] fetch a Fake Store API
+- [x] get a la API para obtener los productos https://fakestoreapi.com/products
+- [x] Procesa los datos obtenidos de la API y muestra los productos en tu interfaz de usuario
 - [ ] agregar productos al carrito de compras.
 - [ ] páginas de detalles de productos
 - [ ] Crea páginas de categorías para organizar los productos según sus categorías.
