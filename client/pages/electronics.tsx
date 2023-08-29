@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { getProducts } from "../services/fakeStoreApi"
+import { getProductFromCategory } from "../services/fakeStoreApi"
 import ProductCard from "../components/ProductCard"
 import Navbar from '@/components/Navbar';
+import { usePathname } from 'next/navigation'
 
 interface Product {
   id: number;
@@ -14,26 +15,27 @@ interface CardProps {
   product: Product;
 }
 
-const index: React.FC<CardProps> = () => {
+type category = string 
 
-  // const [message, setMessage] = useState("Loading...")
-  // const [people, setPeople] = useState([])
+const Electronics: React.FC<CardProps> = () => {
 
-  const [products, setProducts] = useState(["Loading..."]);
+  const [products, setProducts] = useState([]);
 
+  const pathname = usePathname()
 
   useEffect(() => {
-    // fetch('http://localhost:8080/api/home').then(
-    //   response => response.json()
-    // ).then( data => {
-    //   data && setMessage(data.message)
-    //   data && setPeople(data.people)
-    // })
+
+    const category: category = pathname.substring(1)
+    console.log('category', category);
 
     async function fetchAndSetProducts() {
-      const products = await getProducts()
-      console.log('fetch and set products', products);
-      setProducts(products);
+      try {
+        const products = await getProductFromCategory({ category });
+        console.log('fetch and set products', products);
+        setProducts(products);
+      } catch (error) {
+        console.error('Error fetching products:', error);
+      }
     }
 
     fetchAndSetProducts()
@@ -58,4 +60,4 @@ const index: React.FC<CardProps> = () => {
   )
 }
 
-export default index
+export default Electronics
