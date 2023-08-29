@@ -17,7 +17,7 @@ interface CardProps {
 
 type category = string 
 
-const Electronics: React.FC<CardProps> = () => {
+const Jewlery: React.FC<CardProps> = () => {
 
   const [products, setProducts] = useState([]);
 
@@ -58,4 +58,4 @@ const Electronics: React.FC<CardProps> = () => {
   )
 }
 
-export default Electronics
+export default Jewlery
