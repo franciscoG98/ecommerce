@@ -9,7 +9,7 @@ Welcome to the Ecommerce Project! This is a full-stack web application built usi
 - [x] Procesa los datos obtenidos de la API y muestra los productos en tu interfaz de usuario
 - [ ] agregar productos al carrito de compras.
 - [ ] páginas de detalles de productos
-- [ ] Crea páginas de categorías para organizar los productos según sus categorías.
+- [x] Crea páginas de categorías para organizar los productos según sus categorías.
 - [ ] Considera la implementación de un sistema de autenticación y registro de usuarios si planeas tener interacciones más avanzadas.
 - [ ] Implementa pruebas unitarias
 - [ ] Implementa pruebas integración
