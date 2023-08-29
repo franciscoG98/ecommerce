@@ -11,7 +11,7 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ product }) => {
   return (
-    <div className="flex flex-col justify-center w-48 border rounded border-white mx-auto">
+    <div className="flex flex-col justify-center w-48 border rounded border-white mx-auto p-2">
       <img src={product.image} alt={product.title} className="card-image" />
       <h3 className="card-title">{product.title}</h3>
       <p className="">${product.price}</p>
