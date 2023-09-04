@@ -45,7 +45,7 @@ const Jewlery: React.FC<CardProps> = () => {
     <main className='flex justify-center items-center flex-col py-4'>
       <Navbar />
       <div>LGTM</div>
-      <div className="container text-white bg-gray-900 mx-auto overflow-hidden" style={{ width: '768px' }}>
+      <div className="container text-white bg-black mx-auto overflow-hidden" style={{ width: '768px' }}>
         <div className='grid grid-cols-3 gap-3 p-3'>
           {
             products.map((product, idx) => (

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { getProducts } from "../services/fakeStoreApi"
 import ProductCard from "../components/ProductCard"
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 interface Product {
   id: number;
@@ -45,7 +46,7 @@ const index: React.FC<CardProps> = () => {
     <main className='flex justify-center items-center flex-col py-4'>
       <Navbar />
       <div>LGTM</div>
-      <div className="container text-white bg-gray-900 mx-auto overflow-hidden" style={{ width: '768px' }}>
+      <div className="container text-white bg-black mx-auto overflow-hidden my-12" style={{ width: '768px' }}>
         <div className='grid grid-cols-3 gap-3 p-3'>
           {
             products.map((product, idx) => (
@@ -54,6 +55,7 @@ const index: React.FC<CardProps> = () => {
           }
         </div>
       </div>
+      <Footer />
     </main>
   )
 }

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { getCategories } from "@/services/fakeStoreApi";
+import { PiShoppingCartFill } from "react-icons/pi"
 
 const Navbar: React.FC = () => {
   const [categories, setCategories] = useState([]);
@@ -15,7 +16,7 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav className="w-screen bg-gray-900 p-4 -mt-5">
+    <nav className="w-screen bg-black p-4 -mt-5 border border-white">
       <div className="container mx-auto flex justify-between items-center">
         <div>
           <Link href="/">
@@ -37,8 +38,11 @@ const Navbar: React.FC = () => {
           ))}
 
           <li>
-            <Link href="/cart">
-              <span className="text-white hover:text-gray-300">Cart</span>
+            <Link href="/cart" className="relative">
+              <PiShoppingCartFill className='text-white' size={30} />
+              <div className="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -right-2 dark:border-gray-900">
+                2
+              </div>
             </Link>
           </li>
         </ul>
