@@ -20,6 +20,7 @@ const ProductDetail: React.FC<Props> = ({id, title, price, image, category, desc
             <div className="w-5/12 bg-green-600 my-auto border border-white text-white p-3">
                 <h2 className="text-2xl">{title}</h2>
                 <p>estrellas: {rating.rate}</p>
+                {console.log(rating)}
                 <p className="text-lg">$ {price}</p>
                 <p>Category: <b>{category}</b></p>
                 <p>Description: {description}</p>
