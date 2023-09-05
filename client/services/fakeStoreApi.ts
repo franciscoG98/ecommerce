@@ -11,6 +11,20 @@ export async function getProducts() {
   }
 }
 
+export async function getProduct(productId: string) {
+  try {
+    console.log('productId: ', productId);
+    const response = await fetch(`${BASE_URL}/products/${productId}/`)
+    console.log('la concha de tu hermana response: ', response);
+
+    const product = await response.json()
+    return product
+  } catch (error) {
+    console.error('Error fetching product:', error)
+    throw error
+  }
+}
+
 export async function getCategories() {
   try {
     const response = await fetch(`${BASE_URL}/products/categories`)
@@ -21,13 +35,6 @@ export async function getCategories() {
     throw error
   }
 }
-
-// interface CategoryProduct {
-//   id: number;
-//   title: string;
-//   price: number;
-//   image: string;
-// }
 
 export async function getProductFromCategory({ category }: { category:string }) {
   try {

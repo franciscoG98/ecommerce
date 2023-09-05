@@ -26,12 +26,10 @@ const Jewlery: React.FC<CardProps> = () => {
   useEffect(() => {
 
     const category: category = pathname.substring(1)
-    console.log('category', category);
 
     async function fetchAndSetProducts() {
       try {
         const products = await getProductFromCategory({ category });
-        console.log('fetch and set products', products);
         setProducts(products);
       } catch (error) {
         console.error('Error fetching products:', error);
