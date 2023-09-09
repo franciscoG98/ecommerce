@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import { useRouter } from 'next/router'
 import ProductDetail from "@/components/ProductDetail"
 import { getProduct } from "@/services/fakeStoreApi"
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
 
-type Props ={
+type Props = {
     id: string;
     title: string;
     price: number;
@@ -17,7 +17,7 @@ type Props ={
 }
 
 const ProductDetailPage: React.FC<Props> = () => {
-    const [product, setProduct] = useState([])
+    const [product, setProduct] = useState<any[]>([])
 
     const router = useRouter()
     
@@ -47,7 +47,6 @@ const ProductDetailPage: React.FC<Props> = () => {
                     <ProductDetail
                         category={product.category}
                         description={product.description}
-                        id={product.id}
                         image={product.image}
                         price={product.price}
                         rating={product.rating}
