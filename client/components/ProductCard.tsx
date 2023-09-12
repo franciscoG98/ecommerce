@@ -9,9 +9,25 @@ interface Product {
 
 interface CardProps {
   product: Product;
+  handleRemoveProduct: (arg0: number) => void;
+  handleAddProduct: (arg0: Product) => void;
+  cartCount: number;
+  // onClick: (productId: number) => void;
+  onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-const Card: React.FC<CardProps> = ({ product }) => {
+
+const Card: React.FC<CardProps> = ({ product, cartCount, handleRemoveProduct, handleAddProduct }) => {
+
+  // these handle click are because if they weren't appears a SyntheticBaseEvent why? idk, we care? no bc it works
+  const handleClick1 = () => {
+    handleAddProduct(product)
+  }
+
+  const handleClick2 = () => {
+    handleRemoveProduct(product.id)
+  }
+
   return (
     <div className="flex flex-col justify-start h-96 w-48 border rounded border-white mx-auto">
       <Link className="h-3/6 flex items-center justify-center bg-white" href={`/product/${product.id}`}>
@@ -24,9 +40,9 @@ const Card: React.FC<CardProps> = ({ product }) => {
         <div className="relative flex row justify-between mt-5">
           <p>${product.price}</p>
           <div>
-            <button className="rounded bg-gray-300 text-black w-4 font-bold hover:bg-gray-200">-</button>
-            <span className="px-1">0</span>
-            <button className="rounded bg-gray-300 text-black w-4 font-bold hover:bg-gray-200">+</button>
+            <button className="rounded bg-gray-300 text-black w-6 font-bold hover:bg-gray-200" onClick={handleClick2}>-</button>
+            <span className="px-1">{cartCount}</span>
+            <button className="rounded bg-gray-300 text-black w-6 font-bold hover:bg-gray-200" onClick={handleClick1}>+</button>
           </div>
         </div>
       </div>

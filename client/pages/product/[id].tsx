@@ -41,23 +41,21 @@ const ProductDetailPage: React.FC<Props> = () => {
 
     return (
         <>
-            <main>
-                <Navbar />
-                {product ? (
-                    <ProductDetail
-                        category={product.category}
-                        description={product.description}
-                        image={product.image}
-                        price={product.price}
-                        rating={product.rating}
-                        title={product.title}
-                    />
-                ) : (
-                    <p>Loading...</p>
-                )}
+            <Navbar />
+            {product ? (
+                <ProductDetail
+                    category={product.category}
+                    description={product.description}
+                    image={product.image}
+                    price={product.price}
+                    rating={product.rating}
+                    title={product.title}
+                />
+            ) : (
+                <p>Loading...</p>
+            )}
 
-                <Footer />
-            </main>
+            <Footer />
         </>
   );
 };
