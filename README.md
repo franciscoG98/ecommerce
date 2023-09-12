@@ -7,8 +7,13 @@ Welcome to the Ecommerce Project! This is a full-stack web application built usi
 - [x] fetch a Fake Store API
 - [x] get a la API para obtener los productos https://fakestoreapi.com/products
 - [x] Procesa los datos obtenidos de la API y muestra los productos en tu interfaz de usuario
-- [ ] agregar productos al carrito de compras.
-- [ ] páginas de detalles de productos
+- [x] agregar productos al carrito de compras.
+- [x] quitar producto del carrito de compras.
+- [ ] quitar un solo producto del carrito de compras y no todos.
+- [ ] hacer del carrito de compras un estado global con use context
+- [ ] manejar la cantidad de un producto dentro de un carrito separado de la cantidad de productos en el carrito
+
+- [x] páginas de detalles de productos
 - [x] Crea páginas de categorías para organizar los productos según sus categorías.
 - [ ] Considera la implementación de un sistema de autenticación y registro de usuarios si planeas tener interacciones más avanzadas.
 - [ ] Implementa pruebas unitarias
